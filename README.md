@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         mContext =  this
         mDialog = SimpleProgressDialog.Builder(mContext)
             .setMessage("Working... in progress")
+			.setBackgroundDrawable(
+                ContextCompat.getDrawable(mContext,R.drawable.background)
+            )
             .build()
         binding.button.setOnClickListener {
             mDialog.show()
