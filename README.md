@@ -1,4 +1,5 @@
-##Simple Progress Dialog Android
+
+## Simple Progress Dialog Android
 Here is super easy and extremely customizable android progress dialog.
 
 **Custom Example:**<br/>
@@ -8,7 +9,7 @@ Here is super easy and extremely customizable android progress dialog.
 <img src="simpleprogressdialog_default.png" width="30%" height="30%"/>
 
 
-###Usage:
+### Usage:
 ```
 class MainActivity : AppCompatActivity() {
     lateinit var mContext:Context
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-###Methods:
+### Methods:
 **Setting Dialog Text:**
 ``
 setMessage("Hello World")
@@ -56,7 +57,7 @@ setTextColor(Color.GREEN)
  )
 ```
 
-##Custom Background Template
+## Custom Background Template
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:tools="http://schemas.android.com/tools"
