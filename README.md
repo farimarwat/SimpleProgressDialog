@@ -36,21 +36,25 @@ class MainActivity : AppCompatActivity() {
 
 ### Methods:
 **Setting Dialog Text:**
+
 ``
 setMessage("Hello World")
 ``
 
 **Setting Progress Color:**
+
 ``
 setProgressColor(Color.RED)
 ``
 
 **Setting Text Color:**
+
 ``
 setTextColor(Color.GREEN)
 ``
 
 **Setting Custom Background:**
+
 ```
 .setBackgroundDrawable(
        ContextCompat.getDrawable(mContext,R.drawable.background)
