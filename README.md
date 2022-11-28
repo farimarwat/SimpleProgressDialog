@@ -9,6 +9,26 @@ Here is super easy and extremely customizable android progress dialog.
 <img src="simpleprogressdialog_default.png" width="30%" height="30%"/>
 
 
+
+### Include in:
+Android 4.+ (settings.gradle)
+
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+### Dependency
+
+````
+dependencies {
+        implementation 'com.github.farimarwat:SimpleProgressDialog:1.0' 
+		}
+```
+
 ### Usage:
 ```
 class MainActivity : AppCompatActivity() {
@@ -65,6 +85,7 @@ setTextColor(Color.GREEN)
 ```
 
 ## Custom Background Template
+background.xml (in drawable)
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:tools="http://schemas.android.com/tools"
