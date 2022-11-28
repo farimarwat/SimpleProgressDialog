@@ -1,4 +1,3 @@
-
 ##Simple Progress Dialog Android
 Here is super easy and extremely customizable android progress dialog.
 
