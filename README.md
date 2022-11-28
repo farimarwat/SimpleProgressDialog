@@ -1,6 +1,6 @@
 
 ## Simple Progress Dialog Android
-Here is super easy and extremely customizable android progress dialog. Example Project is included.
+Here is super easy and extremely customizable android progress dialog.
 
 **Custom Example:**<br/>
 <img src="simpleprogressdialog_custom.png" width="30%" height="30%"/>
@@ -12,21 +12,19 @@ Here is super easy and extremely customizable android progress dialog. Example P
 
 ### Include in:
 Android 4.+ (settings.gradle)
-
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+	maven { url 'https://jitpack.io' }
 	}
+}
 ```
 ### Dependency
 
-````
+```
 dependencies {
         implementation 'com.github.farimarwat:SimpleProgressDialog:1.0' 
-		}
+	}
 ```
 
 ### Usage:
