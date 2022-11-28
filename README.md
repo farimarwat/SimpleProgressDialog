@@ -1,6 +1,6 @@
 
 ## Simple Progress Dialog Android
-Here is super easy and extremely customizable android progress dialog.
+Here is super easy and extremely customizable android progress dialog. Example Project is included.
 
 **Custom Example:**<br/>
 <img src="simpleprogressdialog_custom.png" width="30%" height="30%"/>
