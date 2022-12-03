@@ -1,6 +1,7 @@
 
 ## Simple Progress Dialog Android
-Here is super easy and extremely customizable android progress dialog.
+Here is super easy and extremely customizable android progress dialog. The best feature of this simple progress dialog over internal android dialog is to change properties dinamically.
+
 
 **Custom Example:**<br/>
 <img src="simpleprogressdialog_custom.png" width="30%" height="30%"/>
@@ -23,7 +24,7 @@ allprojects {
 
 ```
 dependencies {
-        implementation 'com.github.farimarwat:SimpleProgressDialog:1.0' 
+        implementation 'com.github.farimarwat:SimpleProgressDialog:1.1' 
 	}
 ```
 
@@ -81,6 +82,18 @@ setTextColor(Color.GREEN)
        ContextCompat.getDrawable(mContext,R.drawable.background)
  )
 ```
+## Programatically Changable Properties
+``
+setBackgroundDrawable(background:Drawable?)
+``
+
+``
+setProgressBarColor(color:Int)
+``
+
+``
+setMessage(msg:String)
+``
 
 ## Custom Background Template
 background.xml (in drawable)
