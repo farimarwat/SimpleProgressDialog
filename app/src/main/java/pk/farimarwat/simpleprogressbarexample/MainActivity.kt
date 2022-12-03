@@ -20,11 +20,15 @@ class MainActivity : AppCompatActivity() {
         mContext =  this
         mDialog = SimpleProgressDialog.Builder(mContext)
             .setMessage("Working... in progress")
-            .setBackgroundDrawable(
+            .build()
+
+        binding.button.setOnClickListener {
+            //Change properties dynamically after initialization
+            mDialog.setMessage("Second message")
+            mDialog.setProgressBarColor(Color.RED)
+            mDialog.setBackgroundDrawable(
                 ContextCompat.getDrawable(mContext,R.drawable.background)
             )
-            .build()
-        binding.button.setOnClickListener {
             mDialog.show()
         }
         binding.button2.setOnClickListener {

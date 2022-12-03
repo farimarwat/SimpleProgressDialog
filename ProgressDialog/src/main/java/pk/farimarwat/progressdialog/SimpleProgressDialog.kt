@@ -19,6 +19,10 @@ class SimpleProgressDialog private constructor(builder: Builder){
     private var mBackground:Drawable? = null
     private var mProgresssColor = 0
     private var mTextColor = 0
+    private  var mTextViewMessage:TextView
+    private var mProgressBar:ProgressBar
+    private var mContainer:LinearLayout
+
     class Builder(var context: Context){
         private var mMsg:String? = null
         private var mBackground:Drawable? = null
@@ -51,24 +55,24 @@ class SimpleProgressDialog private constructor(builder: Builder){
         val view = LayoutInflater.from(builder.context)
             .inflate(R.layout.item_dialog,null)
 
-        val txt_message = view.findViewById<TextView>(R.id.txt_progress)
+        mTextViewMessage = view.findViewById<TextView>(R.id.txt_progress)
         mMsg?.let {
-                txt_message.text = it
+                mTextViewMessage.text = it
         }
         if(mTextColor != 0){
-            txt_message.setTextColor(mTextColor)
+            mTextViewMessage.setTextColor(mTextColor)
         }
-        val container = view.findViewById<LinearLayout>(R.id.container)
+        mContainer = view.findViewById<LinearLayout>(R.id.container)
         if(mBackground == null){
-            container.background = ContextCompat.getDrawable(builder.context,
+            mContainer.background = ContextCompat.getDrawable(builder.context,
                 R.drawable.bg_container_progress)
         } else {
-            container.background = mBackground
+            mContainer.background = mBackground
         }
 
-        val progress = view.findViewById<ProgressBar>(R.id.progress)
+        mProgressBar = view.findViewById<ProgressBar>(R.id.progress)
         if(mProgresssColor != 0){
-            DrawableCompat.setTint(progress.indeterminateDrawable,mProgresssColor)
+            DrawableCompat.setTint(mProgressBar.indeterminateDrawable,mProgresssColor)
         }
 
 
@@ -87,5 +91,16 @@ class SimpleProgressDialog private constructor(builder: Builder){
     }
     fun setMessage(msg:String){
         mMsg = msg
+        mTextViewMessage.text = mMsg
+    }
+    fun setProgressBarColor(color:Int){
+        if(color != 0){
+            DrawableCompat.setTint(mProgressBar.indeterminateDrawable,color)
+        }
+    }
+    fun setBackgroundDrawable(background:Drawable?){
+        background?.let {
+            mContainer.background = it
+        }
     }
 }
